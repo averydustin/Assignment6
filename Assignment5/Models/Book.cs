@@ -20,6 +20,8 @@ namespace Assignment5.Models
         public String Classif { get; set; }
         public String Category { get; set; }
         public double Price { get; set; }
+
+        public Int32 PageCount { get; set; }
     }
 
   

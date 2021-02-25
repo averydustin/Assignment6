@@ -19,7 +19,8 @@ namespace Assignment5.Migrations
                     ISBN = table.Column<long>(type: "bigint", nullable: false),
                     Classif = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<double>(type: "float", nullable: false)
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    PageCount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

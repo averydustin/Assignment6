@@ -35,7 +35,9 @@ namespace Assignment5.Models
                             ISBN = 9780451419439,
                             Classif = "Fiction",
                             Category = "Classic",
-                            Price = 9.95
+                            Price = 9.95,
+                            PageCount = 1488
+                            
                         },
                         new Book
                         {
@@ -47,7 +49,8 @@ namespace Assignment5.Models
                             ISBN = 9780743270755,
                             Classif = "Non-Fiction",
                             Category = "Biography",
-                            Price = 14.58
+                            Price = 14.58,
+                            PageCount = 944
                         },
                         new Book
                         {
@@ -59,7 +62,8 @@ namespace Assignment5.Models
                             ISBN = 9780553384611,
                             Classif = "Non-Fiction",
                             Category = "Biography",
-                            Price = 21.54
+                            Price = 21.54,
+                            PageCount = 832
                         },
                         new Book
                         {
@@ -71,7 +75,8 @@ namespace Assignment5.Models
                             ISBN = 9780812981254,
                             Classif = "Non-Fiction",
                             Category = "Biography",
-                            Price = 11.61
+                            Price = 11.61,
+                            PageCount = 864
                         },
                         new Book
                         {
@@ -83,7 +88,8 @@ namespace Assignment5.Models
                             ISBN = 9780812974492,
                             Classif = "Non-Fiction",
                             Category = "Historical",
-                            Price = 13.33
+                            Price = 13.33,
+                            PageCount = 528
                         },
                         new Book
                         {
@@ -95,7 +101,8 @@ namespace Assignment5.Models
                             ISBN = 9780804171281,
                             Classif = "Fiction",
                             Category = "Historical Fiction",
-                            Price = 15.95
+                            Price = 15.95,
+                            PageCount = 288
                         },
                         new Book
                         {
@@ -107,7 +114,8 @@ namespace Assignment5.Models
                             ISBN = 9781455586691,
                             Classif = "Non-Fiction",
                             Category = "Self-Help",
-                            Price = 14.99
+                            Price = 14.99,
+                            PageCount = 304
                         },
                         new Book
                         {
@@ -119,7 +127,8 @@ namespace Assignment5.Models
                             ISBN = 9781455523023,
                             Classif = "Non-Fiction",
                             Category = "Self-Help",
-                            Price = 21.66
+                            Price = 21.66, 
+                            PageCount = 240
                         },
                         new Book
                         {
@@ -131,7 +140,8 @@ namespace Assignment5.Models
                             ISBN = 9781591847984,
                             Classif = "Non-Fiction",
                             Category = "Business",
-                            Price = 29.16
+                            Price = 29.16,
+                            PageCount = 400
                         },
                         new Book
                         {
@@ -143,7 +153,44 @@ namespace Assignment5.Models
                             ISBN = 9780553393613,
                             Classif = "Fiction",
                             Category = "Thrillers",
-                            Price = 15.03
+                            Price = 15.03, 
+                            PageCount = 642
+                        },
+                        new Book
+                        {
+                            Title = "Anxious People",
+                            AuthFirst = "Frederick",
+                            AuthLast = "Backman", 
+                            Publisher = "Simon and Schuster",
+                            ISBN = 9788770366038,
+                            Classif = "Fiction",
+                            Category = "Novel",
+                            Price = 20.00,
+                            PageCount = 352
+
+                        },
+                        new Book
+                        {
+                            Title = "A man Called Ove",
+                            AuthFirst = "Fredrik",
+                            AuthLast = "Backman",
+                            Publisher = "Simon and Schuster",
+                            ISBN = 9780718186616,
+                            Classif = "Fiction",
+                            Category = "Novel",
+                            Price = 8.98,
+                            PageCount = 368
+                        },
+                        new Book
+                        {
+                            Title = "Daring Greatly",
+                            AuthFirst = "Brene",
+                            AuthLast = "Brown",
+                            Publisher = "Penguin Books",
+                            ISBN = 9785768087734,
+                            Classif = "Non-Fiction",
+                            Category = "Self-Help",
+                            PageCount = 322
                         }
                     ) ;
 
