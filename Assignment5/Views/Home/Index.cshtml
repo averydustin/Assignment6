@@ -3,63 +3,19 @@
 }
 
 @model BookListViewModel
-    <div class="jumbotron alert-dark">
-        <header style="text-align:center" class="font-weight-bold">
-            <h1>Amazon Book List</h1>
-        </header>
+
+
+    @foreach (var x in Model.Books)
+    {
+        <partial name="ProjectSummary" model="x" />
+    }
+
+
+
+    <div style="align-items:center;">
+        <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+             page-class-normal="btn-outline-dark"
+             page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+             class="btn-group pull-right m-1 align-content-center" style="align-items:center;"></div>
     </div>
-
-
-
-
-
-
-        @foreach (var x in Model.Books)
-        {
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="All" role="tabpanel"
-                     aria-labelledby="home-tab">
-                    <c:if test="${allList.size() == 0}" var="event" scope="session">
-                        <h4 class="text-center py-3 empty-events">
-                            <i class="far fa-folder-open"></i>
-                        </h4>
-                    </c:if>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 md-4">
-                                <div class="card ca" style="width: 60rem;">
-
-                                    <div class="card-body">
-                                        <h5 class="card-title">Book #@x.BookId: @x.Title</h5>
-                                        <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        -->
-                                    </div>
-                                    <ul class="list-group list-group-item-dark">
-                                        <li class="list-group-item bg-dark text-white">Author: @x.AuthFirst @x.AuthLast</li>
-                                        <li class="list-group-item bg-dark text-white">Publisher: @x.Publisher</li>
-                                        <li class="list-group-item bg-dark text-white">ISBN: @x.ISBN</li>
-                                        <li class="list-group-item bg-dark text-white">Classifiction: @x.Classif</li>
-                                        <li class="list-group-item bg-dark text-white">Category: @x.Category</li>
-
-                                    </ul>
-                                    <div class="card-body">
-                                        <a class="card-text">Price: $@x.Price</a>
-                                        <a class="card-text">Pages: @x.PageCount</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        }
-
-
-<div style="align-items:center;">
-    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
-         page-class-normal="btn-outline-dark"
-         page-class-selected="btn-primary"
-         class="btn-group pull-right m-1 align-content-center" style="align-items:center;"></div>
-</div>
 
