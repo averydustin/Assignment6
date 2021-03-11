@@ -1,0 +1,51 @@
+﻿@model Book
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="All" role="tabpanel"
+         aria-labelledby="home-tab">
+        <c:if test="${allList.size() == 0}" var="event" scope="session">
+            <h4 class="text-center py-3 empty-events">
+                <i class="far fa-book"></i>
+            </h4>
+        </c:if>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 md-2" style="float:left">
+                    <div class="card ca" style="width: 60rem;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Book #@Model.BookId: @Model.Title</h5>
+                            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            -->
+                        </div>
+                        <ul class="list-group list-group-item-dark">
+                            <li class="list-group-item bg-dark text-white">Author: @Model.AuthFirst @Model.AuthLast</li>
+                            <li class="list-group-item bg-dark text-white">Publisher: @Model.Publisher</li>
+                            <li class="list-group-item bg-dark text-white">ISBN: @Model.ISBN</li>
+                            <li class="list-group-item bg-dark text-white">Classifiction: @Model.Classif</li>
+                            <li class="list-group-item bg-dark text-white">Category: @Model.Category</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="card-text">Price: $@Model.Price</a>
+                            <a class="card-text">Pages: @Model.PageCount</a>
+                            <form id="@Model.BookId" asp-page="/Purchase" method="post">
+                                <input type="hidden" asp-for="BookId" />
+                                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                                <span class="card-text p-1">
+
+                                    <button type="submit"
+                                            class="btn-success btn-sm pull-right" style="float:right">
+                                        Add to Cart
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+       
